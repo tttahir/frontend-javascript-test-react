@@ -11,7 +11,7 @@ function TimerComponent({ currentInterval }) {
   useEffect(() => {
     let timerId;
 
-    if (isRunning) {
+    if (isRunning && currentInterval > 0) {
       timerId = setInterval(() => {
         setCurrentTime((prevValue) => prevValue + 1);
       }, currentInterval * 1000);
